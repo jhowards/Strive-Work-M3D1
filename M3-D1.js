@@ -186,10 +186,10 @@ console.log("<--EX12-->");
 // 13)
 // Create a function to find the index of the greatest element of a given array of integers
 const elementindex = function (array) {
-  var max = array[0];
-  var maxIndex = 0;
+  let max = array[0];
+  let maxIndex = 0;
 
-  for (var i = 1; i < array.length; i++) {
+  for (let i = 1; i < array.length; i++) {
     if (array[i] > max) {
       maxIndex = i;
       max = array[i];
@@ -205,9 +205,29 @@ console.log(elementindex([5, 2, 7]));
 
 // Create a function to get the largest even number from an array of integers.
 
+const evennum = function (array) {
+  array.sort((x, y) => y - x);
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 == 0) return array[i];
+  }
+};
+
+console.log("<--EX14-->");
+console.log(evennum([5, 2, 7, 8]));
+
 // 15)
 
 // Create a function to check from two given integers, whether one is positive and another one is negative.
+
+const evennum = function (array) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 == 0) return array[i];
+  }
+};
+
+console.log("<--EX15-->");
+console.log(evennum([5, 2]));
 
 // 16)
 
