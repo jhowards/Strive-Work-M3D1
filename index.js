@@ -93,10 +93,33 @@ console.log(copystring("watermelon", 3));
 Create a function to display the city name if the string begins with "Los" or "New" otherwise return blank.
 */
 
+const citycheck = function (str) {
+  let blankstr = "";
+  if (str.slice(0, 3) === "Los" || str.slice(0, 3) === "New") {
+    return str;
+  } else {
+    return blankstr;
+  }
+};
+
+console.log("<--EX7-->");
+console.log(citycheck("Los Angeles"));
+
 /*
 8)
 Create a function to calculate the sum of three elements of a given array of integers of length 3.
 */
+
+const arraysum = function (array) {
+  let sum = null;
+  for (let i = 0; i < array.length; i++) {
+    sum += array[i];
+  }
+  return sum;
+};
+
+console.log("<--EX8-->");
+console.log(arraysum([3, 8, 7]));
 
 /*
 
@@ -105,7 +128,6 @@ Create a function to test whether an array of integers of length 2 contains 1 or
 */
 
 /*
-
 10)
 
 Create a function to test whether an array of integers of length 2 does not contain 1 or a 3
