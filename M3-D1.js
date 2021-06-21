@@ -155,8 +155,20 @@ console.log("<--EX10-->");
 console.log(notarrayints([5, 2]));
 
 // 11)
-
 // Create a function to find the longest string from a given array of strings.
+
+const longeststring = function (array) {
+  let longstring = "";
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].length > longstring.length) {
+      longstring = array[i];
+    }
+  }
+  return longstring;
+};
+
+console.log("<--EX11-->");
+console.log(longeststring(["hello", "goodbye", "strive"]));
 
 // 12)
 
@@ -165,12 +177,29 @@ console.log(notarrayints([5, 2]));
 // Types of angles:
 //     Acute angle: An angle between 0 and 90 degrees.
 //     Right angle: An 90 degree angle.
-//     btuse angle: An angle between 90 and 180 degrees.
+//     obtuse angle: An angle between 90 and 180 degrees.
 //     Straight angle: A 180 degree angle.
 
-// 13)
+// const longeststring = function (array) {};
+console.log("<--EX12-->");
 
+// 13)
 // Create a function to find the index of the greatest element of a given array of integers
+const elementindex = function (array) {
+  var max = array[0];
+  var maxIndex = 0;
+
+  for (var i = 1; i < array.length; i++) {
+    if (array[i] > max) {
+      maxIndex = i;
+      max = array[i];
+    }
+  }
+  return maxIndex;
+};
+
+console.log("<--EX13-->");
+console.log(elementindex([5, 2, 7]));
 
 // 14)
 
