@@ -31,16 +31,28 @@ const is50 = function (num1, num2) {
 
 console.log("<--EX2-->");
 console.log(is50(25, 25));
+
 /*
 3)
 Create a function to remove a character at the specified position of a given string and return the new string.
 */
 
+const removecharacter = function (str, position) {
+  return str.slice(0, position - 1) + str.slice(position, str.length);
+};
+console.log("<--EX3-->");
+console.log(removecharacter("watermelon", 6));
 /*
 
 4)
  Create a function to find the largest of three given integers.
 */
+
+const largeint = function (num1, num2, num3) {
+  return Math.max(num1, num2, num3);
+};
+console.log("<--EX4-->");
+console.log(largeint(4, 2, 3));
 
 /*
 5)
