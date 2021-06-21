@@ -59,14 +59,36 @@ console.log(largeint(4, 2, 3));
 Create a function to check whether two numbers are in range 40..60 or in the range 70..100 inclusive.
 */
 
+const checkrange = function (num1, num2) {
+  if (
+    (num1 >= 40 && num1 <= 60 && num2 >= 40 && num2 <= 60) ||
+    (num1 >= 70 && num1 <= 100 && num2 >= 70 && num2 <= 100)
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+console.log("<--EX5-->");
+console.log(checkrange(60, 45));
+
 /*
 6) 
-
 Create a function to create a new string of specified copies (positive number) of a given string.
 */
 
-/*
+const copystring = function (str, copies) {
+  let newstring = "";
+  for (let i = 0; i < copies; i++) {
+    newstring += str;
+  }
+  return newstring;
+};
+console.log("<--EX6-->");
+console.log(copystring("watermelon", 3));
 
+/*
 7)
 Create a function to display the city name if the string begins with "Los" or "New" otherwise return blank.
 */
