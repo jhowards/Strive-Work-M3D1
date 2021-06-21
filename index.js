@@ -3,16 +3,34 @@
 1)
 Create a function to calculate the sum of the two given integers. If the two values are same, then returns triple their sum.
 */
-
-intcalc = () => {
-  return 1;
+const intsum = function (num1, num2) {
+  let sum = null;
+  if (num1 === num2) {
+    sum = (num1 + num2) * 3;
+  } else {
+    sum = num1 + num2;
+  }
+  return sum;
 };
+console.log("<--EX1-->");
+console.log(intsum(3, 3));
 
 /*
 2)
 Create a function to check two given numbers and return true if one of the number is 50 or if their sum is 50.
 */
 
+const is50 = function (num1, num2) {
+  let sum = null;
+  if (num1 === 50 || num2 === 50 || num1 + num2 === 50) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+console.log("<--EX2-->");
+console.log(is50(25, 25));
 /*
 3)
 Create a function to remove a character at the specified position of a given string and return the new string.
