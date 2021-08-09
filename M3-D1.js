@@ -180,8 +180,30 @@ console.log(longeststring(["hello", "goodbye", "strive"]));
 //     obtuse angle: An angle between 90 and 180 degrees.
 //     Straight angle: A 180 degree angle.
 
-// const longeststring = function (array) {};
+const angletype = function (angle) {
+  let answer = "";
+  switch (angle) {
+    case angle > 0 && angle < 90:
+      answer = "This is an acute angle";
+      break;
+    case (angle = 90):
+      answer = "This is a right angle";
+      break;
+    case angle > 90 && angle < 180:
+      answer = "This is an obtuse angle";
+      break;
+    case (angle = 180):
+      answer = "This is a straight angle";
+      break;
+    case angle < 1 || angle > 180:
+      answer = "This is an INVALID angle";
+      break;
+  }
+  return answer;
+};
+
 console.log("<--EX12-->");
+console.log(angletype(180));
 
 // 13)
 // Create a function to find the index of the greatest element of a given array of integers
@@ -235,9 +257,37 @@ console.log(posneg(2, -2));
 
 // Create a function to create new string with first 3 characters are in lower case and the others in upper case. If the string length is less than 3 convert all the characters in upper case.
 
+const stringConvert = function (string) {
+  if (string.length < 3) {
+    string = string.toUpperCase();
+    return string;
+  } else {
+    let firstString = string.substring(0, 3);
+    let secondString = string.substring(3, string.length);
+    firstString = firstString.toLowerCase();
+    secondString = secondString.toUpperCase();
+    return firstString + secondString;
+  }
+};
+
+console.log("<--EX16-->");
+console.log(stringConvert("hello there"));
+
 // 17)
 
 // Create a function to calculate the sum of the two given integers, If the sum is in the range 50..80 return 65 other wise return 80.
+
+const intSum = function (num1, num2) {
+  total = num1 + num2;
+  if (total >= 50 && total <= 80) {
+    return 65;
+  } else {
+    return 80;
+  }
+};
+
+console.log("<--EX17-->");
+console.log(intSum(42, 40));
 
 // 18)
 
