@@ -220,14 +220,16 @@ console.log(evennum([5, 2, 7, 8]));
 
 // Create a function to check from two given integers, whether one is positive and another one is negative.
 
-const evennum = function (array) {
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] % 2 == 0) return array[i];
+const posneg = function (num1, num2) {
+  if ((num1 < 0 && num2 > 0) || (num1 > 0 && num2 < 0)) {
+    return true;
+  } else {
+    return false;
   }
 };
 
 console.log("<--EX15-->");
-console.log(evennum([5, 2]));
+console.log(posneg(2, -2));
 
 // 16)
 
